@@ -1,6 +1,8 @@
 const router = require('express').Router();
-const { accessToken, callback } = require('../controller')
+const { githubAccessToken, kakaoAccessToken, googleAccessToken, callback } = require('../controller')
 
-router.post('/accesstoken', accessToken);
+router.post('/git/accesstoken', githubAccessToken);
+router.post('/kakao/accesstoken', kakaoAccessToken);
+router.post('/google/accesstoken', googleAccessToken);
 
 module.exports = router;
